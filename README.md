@@ -15,20 +15,20 @@ I also attached my CV.
 
 2. Each of the following requirements is noted as a comment in 2 files: index.html & style.css with the corresponding label:
 
-▪ Links to my own pages 
-▪ Links to external webpages
-▪ A navigation bar
-▪ At least one table used in an appropriate manner
-▪ At least one list (ordered or unordered)
-▪ At least one local or embedded video
-▪ At least five CSS3 and four HTML5 specific elements 
+- Links to my own pages
+- Links to external webpages
+- A navigation bar
+- At least one table used in an appropriate manner
+- At least one list (ordered or unordered)
+- At least one local or embedded video
+- At least five CSS3 and four HTML5 specific elements 
     NOTE:
         5 CSS3 specific elements: gradient, opacity, transition, box-shadow, @media
         4 HTML5 specific elements: footer, header, nav, section          
-▪ Make use of the CSS positional properties: position, display
-▪ Make use of both inline and block elements
+- Make use of the CSS positional properties: position, display
+- Make use of both inline and block elements
 
 
 3. Other parts of HTML and CSS going beyond what described in the lectures and practical classes that make my website responsive:
-1. The use of CSS variable
-2. The use of @media to set the appearance of the page for different screen-size
+- The use of CSS variable
+- The use of @media to set the appearance of the page for different screen-size
