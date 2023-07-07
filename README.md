@@ -1,3 +1,5 @@
+## A simple portfolio website
+
 In this school assignment, I was asked to create a responsive and interactive personal website using HTML and CSS only. 
 
 Another requirements of the assignment:
