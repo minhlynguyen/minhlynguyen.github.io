@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+:root{ /* The use of of variables is referenced from tutorial: https://youtu.be/F-yDkTqkAO8 */
+    --header-height: 72px; /* The use of CSS variable I learnt from a tutorial */
+    --background-color: #0F1626;
+    --background-color-light: #1e2e53;
+    --footer-height: 70px;
+    --white-font: #f5f5f5;
+    --white-font-light: rgba(245, 245, 245, 0.5);
+    --orange: #FF652F;
+    --orange-light: rgba(255, 101, 47, 0.5);
+    --shadow: rgba(0, 0, 0, 0.15); 
+}
+
+body{
+    min-height: 100vh;  /* At least five CSS3 and four HTML5 specific elements: css_property_1 */
+    /* overflow-x: hidden; At least five CSS3 and four HTML5 specific elements: css_property_2 */
+    display: flex; /* At least five CSS3 and four HTML5 specific elements: css_property_3 */
+    flex-direction: column; /* At least five CSS3 and four HTML5 specific elements: css_property_4 */
+    margin: 0; /* At least five CSS3 and four HTML5 specific elements: css_property_5 */
+    font-family: 'Roboto', sans-serif;   
+    color: var(--white-font);
+    font-size: 13px;
+    background: linear-gradient(to bottom right, var(--background-color), var(--background-color-light));    /* Reference: tutorial: https://youtu.be/F-yDkTqkAO8 */
+    /*CSS3 specific elements: gradient*/
+}
+
+
+p, li, a{
+    font-family: andale mono;
+}
+
+h1, h2{
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5em;
+    margin: 20px auto;
+}
+
+h2{
+    font-size: 1.3em;
+    opacity: 0.7;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white-font);
+}
+
+img{ /* Make use of both inline and block elements: inline */
+    height: 100%;
+}
+
+img{
+    opacity: 0.8; /*CSS3 specific elements: opacity*/
+}
+
+img:hover{
+    opacity: 1;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.button{
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.15s; /*CSS3 specific elements: gradient*/
+}
+
+.button:hover{
+    background: var(--orange-light);
+    border: 1px solid var(--orange-light);
+}
+
+.ghost_button{
+    border: 1px solid var(--orange);
+    padding: 0.8em;
+    border-radius: 5px;
+    color: var(--orange);
+    background-color: transparent;
+    text-align: center;
+    transition-property: background-color, color; /*CSS3 specific elements: transition*/
+    transition: 0.15s;
+}
+
+.ghost_button:hover{
+    border: solid var(--orange) 1px;
+    padding: 0.8em;
+    border-radius: 5px;
+    background-color: var(--orange);
+    color: var(--white-font);
+}
+
+header{
+    position: fixed; /* Make use of the CSS positional properties (e.g. position, float) */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px var(--shadow); /*CSS3 specific elements: gradient*/
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 100%;
+    display: flex; /* Make use of the CSS positional properties (e.g. position, float) */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav_logo{
+    height: 100%;
+}
+
+#hamburger{
+    cursor: pointer;
+}
+
+
+ul li{
+    display: inline-block;
+    padding: 15px;
+}
+
+header nav ul li a{
+	color: var(--white-font);
+}
+
+header nav ul li a:hover{
+	color: var(--orange);
+}
+
+table{
+    border-collapse: collapse;
+    margin: 20px 0 30px 0;
+    border-radius: 5px 5px 0 0;
+    overflow: auto;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+thead th{
+    background-color: var(--orange);
+    text-align: left;
+    font-weight: 800!;
+}
+
+th, td{
+    padding: 10px 12px;
+}
+
+tbody tr{
+    border-bottom: solid 1px var(--orange-light)
+}
+
+tbody tr:hover{
+    border-bottom: solid 1px var(--orange-light);
+    background-color: var(--orange-light);
+}
+
+tbody tr:last-child{
+    border-bottom: solid 2px var(--orange);
+}
+
+
+/* From the next line to the one before the next comment are referenced from https://youtu.be/F-yDkTqkAO8 */
+#nav_toggle{
+    display: none;
+}
+
+#nav_toggle:checked ~ #nav_ul{
+    display: flex;
+}
+
+#nav_ul{ 
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: var(--background-color-light);
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Reference ends */
+
+
+#hero{
+    margin-top: 120px;
+    display: flex;
+    padding-top: var(--header-height); 
+    align-items: center;
+    box-sizing: border-box; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+#hero_content_left{
+    padding: 20px;
+    color: var(--white-font);
+}
+
+#profile_photo{
+    margin: 0;
+    padding: 20px;
+    }
+
+#hero_content_right img{
+    max-width: 100%;
+}
+
+#greet{
+    color: var(--orange);
+}
+
+#tag_line{
+    font-weight: 500;
+    font-size: 1.5em;
+    padding-bottom: 30px;
+}
+
+#skills{ 
+    padding-top: 40px;
+    overflow: visible;
+    text-align: justify;
+}
+
+#skills ul {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    vertical-align: top;
+    list-style: none;
+    padding: 0%;
+}
+#skills ul li {
+    height: 100%;
+    width: 28%;
+    padding-top: 5%;
+    vertical-align: top;
+}
+
+footer{
+    bottom: 0;
+    font-size: 0.8em;
+    color: var(--white-font-light);
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#social, #email{
+    display: none;
+}
+
+#social ul, #email ul{
+    width: 100%;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#social ul li, #email ul li{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: var(--white-font-light);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+#social ul li a i, #email ul li a{
+    position: relative;
+    top: 0px;
+    font-size: large;
+    color: var(--white-font-light);
+    transition-property: top, color;
+    transition-duration: 0.2s;
+}
+
+#email ul li a{
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+}
+
+#social ul li a i:hover, #email ul li a:hover{
+    position: relative;
+    top: -2px;
+    color: var(--orange);
+}
+
+#email{
+    display: none;
+}
+
+#email li a{
+    writing-mode: vertical-rl;
+}
+
+
+/* The use of @media to set the appearance of the page for different screen-size learnt from tutorial https://youtu.be/F-yDkTqkAO8*/
+
+/* From the next line to the one before the next comment are referenced from https://youtu.be/F-yDkTqkAO8 */
+@media screen and (min-width: 790px){ /*CSS3 specific elements: @media*/
+    #hamburger{
+         display: none;
+    }
+ 
+    #nav_ul{
+         display: initial;
+         position: static;
+         width: unset;
+         height: unset;
+         padding: unset;
+         background: transparent;
+    }
+/* Reference ends */ 
+    #social{
+         display: initial;
+         position: fixed;
+         width: 70px;
+         bottom: var(--footer-height);
+         left: 20px;
+         color: var(--white-font);
+         margin: 0;
+         padding: 0;
+    }
+
+    #email{
+         display: initial;
+         position: fixed;
+         width: 70px;
+         bottom: var(--footer-height);
+         right: 20px;
+         color: var(--white-font);
+         margin: 0;
+         padding: 0;
+    }        
+    }
+
+
+
+@media screen and (max-width: 540px){ 
+    #work_history thead{
+        display: none;
+    }
+
+    #work_history, #work_history tbody, #work_history tr, #work_history td{
+        display: block;
+        width: 100%;
+    }
+}
+
+#hero_gallery{
+    padding-top: var(--header-height); 
+    align-items: center;
+    box-sizing: border-box; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+#photo{
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+#photo .card{
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+#photo .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+#education_video iframe{
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#contact{
+    text-align: center;
+    align-items: center;
+}
+
+.contact_me{
+    margin-top: 100px;
+}
