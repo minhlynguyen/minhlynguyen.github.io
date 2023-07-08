@@ -31,12 +31,6 @@ p, li, a{
     font-family: andale mono;
 }
 
-td p, td ul li, td ul a{
-    display: block;
-    padding: 5px 0px;
-    font-family: 'Roboto', sans-serif;  
-}
-
 h1, h2{
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -180,7 +174,11 @@ tbody tr:last-child{
     border-bottom: solid 2px var(--orange);
 }
 
-
+td p, td ul li, td ul a{
+    display: block;
+    padding: 5px 0px;
+    font-family: 'Roboto', sans-serif;  
+}
 /* From the next line to the one before the next comment are referenced from https://youtu.be/F-yDkTqkAO8 */
 #nav_toggle{
     display: none;
