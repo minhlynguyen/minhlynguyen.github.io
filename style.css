@@ -31,6 +31,12 @@ p, li, a{
     font-family: andale mono;
 }
 
+td p, td ul li, td ul a{
+    display: block;
+    padding: 5px 0px;
+    font-family: 'Roboto', sans-serif;  
+}
+
 h1, h2{
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -126,6 +132,9 @@ nav{
     cursor: pointer;
 }
 
+ul{
+    padding: 0px;
+}
 
 ul li{
     display: inline-block;
